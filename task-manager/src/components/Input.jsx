@@ -1,11 +1,20 @@
-import React from 'react'
+import React from "react";
 
-export default function Input({label, isTextarea=false, ...props}) {
+const inputClass =
+  "w-full p-1 border-b-2 rounded-sm border-stone-300 bg-stone-200 text-stone-600 focus:outline-none focus:border-stone-600";
+
+export default function Input({ label, isTextarea = false, ...props }) {
   return (
-    <p>
-      <label htmlFor="">{label}</label>
-      {isTextarea ? <textarea {...props} /> : <input {...props} />}
-      <input type="text" />
+    <p className='flex flex-col gap-1 my-4'>
+      <label className='text-sm font-bold uppercase text-stone-500'>
+        {label}
+      </label>
+      {isTextarea ? (
+        <textarea className={inputClass} {...props} />
+      ) : (
+        <input className={inputClass} {...props} />
+      )}
+      <input type='text' />
     </p>
-  )
+  );
 }
