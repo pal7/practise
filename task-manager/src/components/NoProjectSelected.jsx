@@ -2,7 +2,7 @@ import React from "react";
 import noProjectImage from "../assets/no-projects.png";
 import Button from "./Button";
 
-export default function NoProjectSelected({ handleOpenProject }) {
+export default function NoProjectSelected({ onAddProject }) {
   return (
     <div className='mt-24 text-center w-2/3'>
       <img
@@ -17,7 +17,7 @@ export default function NoProjectSelected({ handleOpenProject }) {
         Select a project from the sidebar to view its tasks.
       </p>
       <p className='mt-8'>
-        <Button onClick={handleOpenProject}>Create New Project</Button>
+        <Button onClick={onAddProject}>Create New Project</Button>
       </p>
     </div>
   );
