@@ -1,6 +1,6 @@
-import { useRef } from 'react';
+import { useRef } from "react";
 
-import CartModal from './CartModal.jsx';
+import CartModal from "./CartModal.jsx";
 
 export default function Header({ cart, onUpdateCartItemQuantity }) {
   const modal = useRef();
@@ -28,12 +28,12 @@ export default function Header({ cart, onUpdateCartItemQuantity }) {
         ref={modal}
         cartItems={cart.items}
         onUpdateCartItemQuantity={onUpdateCartItemQuantity}
-        title="Your Cart"
+        title='Your Cart'
         actions={modalActions}
       />
-      <header id="main-header">
-        <div id="main-title">
-          <img src="logo.png" alt="Elegant model" />
+      <header id='main-header'>
+        <div id='main-title'>
+          <img src='logo.png' alt='Elegant model' />
           <h1>Elegant Context</h1>
         </div>
         <p>
