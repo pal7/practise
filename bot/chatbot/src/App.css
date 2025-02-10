@@ -1,5 +1,6 @@
 .chat-window {
-  height: 32rem; /* Increased height from 16rem to 32rem */
+  height: 32rem;
+  width: 32rem; /* Increased height from 16rem to 32rem */
   padding: 0.5rem; /* 2 * 0.25rem */
   border-bottom: 1px solid #e5e7eb; /* Tailwind's border-b */
   background-color: #ffffff; /* Tailwind's bg-white */
@@ -28,16 +29,17 @@
   padding: 0.5rem; /* Tailwind's p-2 */
   margin-bottom: 0.5rem; /* Tailwind's mb-2 */
   border-radius: 0.375rem; /* Tailwind's rounded-lg */
+  display: flex;
 }
 
 .user-message {
   background-color: #d1fae5; /* Tailwind's bg-green-100 */
-  align-self: flex-end;
+  justify-content: flex-end;
 }
 
 .bot-message {
   background-color: #f3f4f6; /* Tailwind's bg-gray-100 */
-  align-self: flex-start;
+  justify-content: flex-start;
 }
 
 .message-content {
@@ -70,9 +72,4 @@
 
 .app-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60vh;
-  background-color: #f3f4f6;
-  width: 50vh; /* Tailwind's bg-gray-100 */
 }

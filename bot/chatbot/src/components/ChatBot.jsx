@@ -22,7 +22,7 @@ export default function ChatBot() {
   }
 
   return (
-    <div className='chat-window'>
+    <div>
       <ChatWindow messages={messages} />
       <InputBox sendMessage={sendMessage} />
     </div>
