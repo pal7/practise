@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { sortPlacesByDistance } from "./loc.js";
 import Places from "./components/Places.jsx";
 import { AVAILABLE_PLACES } from "./data.js";
@@ -11,7 +11,7 @@ const storedPlaces = storedIds.map((id) =>
   AVAILABLE_PLACES.find((place) => place.id === id)
 );
 // .filter((place) => place !== undefined);
-console.log(storedPlaces);
+// console.log(storedPlaces);
 
 function App() {
   // const modal = useRef();
@@ -59,7 +59,7 @@ function App() {
     }
   }
 
-  function handleRemovePlace() {
+  const handleRemovePlace = useCallback(function handleRemovePlace() {
     setPickedPlaces((prevPickedPlaces) =>
       prevPickedPlaces.filter((place) => place.id !== selectedPlace.current)
     );
@@ -70,7 +70,7 @@ function App() {
       "selectedPlaces",
       JSON.stringify([storedIds.filter((id) => id !== selectedPlace.current)])
     );
-  }
+  }, []);
 
   return (
     <>
